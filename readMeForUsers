@@ -38,6 +38,7 @@ Procedure to run as a windows service using the command prompt:
 6. Other
 	6.1  See status
 		5.1.2 .\pd.exe status
+        Below requires the use of a powershell
 	6.2  Tail the output file 
 		5.2.2  Get-Content ./pd.out.log -Wait -Tail 30
 	6.3  Tail the output file 
