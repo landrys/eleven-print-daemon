@@ -26,6 +26,9 @@ Procedure to run as a windows service using the command prompt:
 	4.2 .\pd.exe uninstall 
         4.3 .\pd.exe install
         4.4 .\pd.exe start
+        4.4 .\pd.exe status
+		4.4.1 Should return a state of Running. If state is Stopped something is wrong. Look at the log files to get a clue of what is going on.
+		4.4.2 type pd.out.log, pd.err.log and any other .log file.
 
 5. Set up Service to delay start on reboot 
 	5.1 Windows System --> Control Panel --> Administrative Tools --> Services --> DoubleClick on PrintDaemon   
