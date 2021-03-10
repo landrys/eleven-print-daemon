@@ -6,9 +6,9 @@ bikescanner user can print the label to the printer. All the required info and t
 for more information. 
 
 ## Development Notes
-A remote repository is set up on the Company shared Google drive. The build is done there and the executable(jar) is copied to a directory where a user can set up the daemon as a windows service. There is also a directory where the user can set up the Daeomon using a BAT file. Having some trouble with broadcast when using it. It seems to hang so there is an option to run with a simple select every 10 seconds ( use.broadcast=false ). 
+A remote repository is set up on the Company shared Google drive. The build is done there and the executable(jar) is copied to a directory where a user can set up the daemon as a windows service. There is also a directory where the user can set up the daemon using a BAT file. Having some trouble with broadcast when using it. It seems to hang so there is an option to run with a simple select every 10 seconds ( use.broadcast=false ). 
 
-The daeomon can be run in debug or prod mode. In debug mode it is not attached to a printer. It will only print out jobs to the screen. It also takes the print_host, the printer_id, allowed_inactivity and use.broadcast as arguments. Allowed inactivity just tells it how long to wait before a reconnect.
+The daemon can be run in debug or prod mode. In debug mode it is not attached to a printer. It will only print out jobs to the screen. It also takes the print_host, the printer_id, allowed_inactivity and use.broadcast as arguments. Allowed inactivity just tells it how long to wait before a reconnect.
 
 Known issues:
 	1. If the reconnect is done while a user is scanning it may print out multiple labels.
