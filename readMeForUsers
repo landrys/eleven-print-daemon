@@ -1,0 +1,43 @@
+PRINT DAEMON
+
+Print daemon is required to be running on any computer with a label printer to be used for printing labels with Bikescanner.
+
+Procedure to run as a windows service using the command prompt:
+
+1. Create directory "PrintLabels" under home directory
+	1.1 cd ~\
+	1.1 mkdir PrintLabels
+
+2. Copy resources from shared area
+	2.1  cd PrintLabels
+	2.2  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\printDaemon.jar ."
+	2.3  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\pd.exe ."
+	2.4  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\pd.xml ."
+
+3. Edit the pd.xml for your computer ( Remove the square brackets [] in the xml file after picking options)
+	3.1 [debug or prod] If debug it will not send to a printer just print to console
+	3.3 [username] set username of the acccount on the computer ( home directory )
+	3.3 [testnator.com or 11nator.com:8011] set PRINT_HOST
+	3.4 [your printer number] set  PRINTER_ID  Look for this id in web eleven print configuration
+	3.5 [true or false] USE_BROADCAST  true  or false If false will do a select every 15 seconds
+
+4. Install printDaemon Service ( Assumes one is running. If not, it will still work )
+	4.1 .\pd.exe stop 
+	4.2 .\pd.exe uninstall 
+        4.3 .\pd.exe install
+        4.4 .\pd.exe start
+
+5. Set up Service to delay start on reboot 
+	5.1 Windows System --> Control Panel --> Administrative Tools --> Services --> DoubleClick on PrintDaemon   
+	5.2 Select Autorestart(Delayed)
+	5.3 Apply
+
+6. Other
+	6.1  See status
+		5.1.2 .\pd.exe status
+	6.2  Tail the output file 
+		5.2.2  Get-Content ./pd.out.log -Wait -Tail 30
+	6.3  Tail the output file 
+		5.3.2  Get-Content ./pd.out.log -Wait -Tail 30
+
+ 
