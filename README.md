@@ -10,10 +10,10 @@ A remote repository is set up on the Company shared Google drive. The build is d
 
 The daemon can be run in debug or prod mode. In debug mode it is not attached to a printer. It will only print out jobs to the screen. It also takes the print_host, the printer_id, allowed_inactivity and use.broadcast as arguments. Allowed inactivity just tells it how long to wait before a reconnect.
 
-*Known issues:
-	* If the reconnect is done while a user is scanning it may print out multiple labels.
-	* On Windows the broadcast or maybe the entire process seems to hang when run on a command window.
-	* In 2. I did see that if you press return in the window it will wake up.
+Known issues:
+ * If the reconnect is done while a user is scanning it may print out multiple labels.
+ * On Windows the broadcast or maybe the entire process seems to hang when run on a command window.
+ * In 2. I did see that if you press return in the window it will wake up.
 
 ## Reference
 https://github.com/winsw/winsw/blob/v3/docs/xml-config-file.md 
