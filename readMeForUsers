@@ -10,14 +10,12 @@ Procedure to run as a windows service using the command prompt:
 
 2. Copy resources from shared area
 	2.1  cd PrintLabels
-	2.2  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\printDaemon.jar ."
-	2.3  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\pd.exe ."
-	2.4  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\pd.xml ."
+	2.2  copy "G:\Shared Drives\Company Team Drive\Software\PrintDaemon\TheDaemonUsingWindowsService\. ."
 
 3. Edit the pd.xml for your computer ( Remove the square brackets [] in the xml file after picking options)
 	3.1 [debug or prod] If debug it will not send to a printer just print to console
 	3.3 [username] set username of the acccount on the computer ( home directory )
-	3.3 [testnator.com or 11nator.com:8011] set PRINT_HOST
+	3.3 [testnator.com or 11nator.com] set PRINT_HOST
 	3.4 [your printer number] set  PRINTER_ID  Look for this id in web eleven print configuration
 	3.5 [true or false] USE_BROADCAST  true  or false If false will do a select every 15 seconds
 
